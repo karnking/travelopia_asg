@@ -133,9 +133,14 @@ body {
 }
 .description>p{
     display: inline-block;
+    transition: max-height 0.3s ease-out;
 }
-.description>p>a{
+.description>button{
+    background-color: white;
+    border: none;
+    font-size: 1.1rem;
     color: #00a8b6;
+    display: none;
 }
 .contact{
     width: 40%;
@@ -238,15 +243,19 @@ body {
         width: 90%;
         margin: auto;
         padding: 0;
-        gap: 1rem;
+        display: flex;
+        flex-direction: column;
     }
     .description>h1{
         font-size: 1.5rem;
-        margin: 3rem 0 0.7rem 0;
+        margin: 1.5rem 0 0.7rem 0;
     }
     .description>p{
         margin: 0;
-        margin-bottom: 1rem;
+    }
+    .description>button{
+        display: inline-block;
+        margin-bottom: 5px;
     }
     .contact{
         width: 90%;
