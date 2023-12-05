@@ -4,6 +4,7 @@ let state = true
 const handleClick = () => {
     document.querySelector('.description>p').innerText = !state ? desc.substring(0, 201) + '...' : desc
     document.querySelector('.description>button').innerText = state ? "Show Less":"Show More"
+    document.querySelector('.description>button').innerHTML += state ? " <i class='fa-solid fa-arrow-up'></i>" : " <i class='fa-solid fa-arrow-down'></i>"
     state = !state
 }
 
