@@ -18,15 +18,15 @@ const handleClick = () => {
     // Update the state
     state = !state;
 };
+document.querySelector('.description>button').addEventListener("click", handleClick);
 
 // Get the window width
 let w = window.innerWidth;
 
-// If the window width is greater than 768 pixels, show the full description
-if (w > 768) {
+// If the window width is greater than 1000 pixels, show the full description
+if (w > 1000) {
     document.querySelector('.description>p').innerHTML = desc;
 } else {
-    // If the window width is 768 pixels or less, show a truncated description and attach the click event to the button
+    // If the window width is 1000 pixels or less, show a truncated description and attach the click event to the button
     document.querySelector('.description>p').innerHTML = desc.substring(0, 201) + '...';
-    document.querySelector('.description>button').addEventListener("click", handleClick);
 }
