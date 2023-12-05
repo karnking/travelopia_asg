@@ -27,6 +27,6 @@ let w = window.innerWidth;
 if (w > 1000) {
     document.querySelector('.description>p').innerHTML = desc;
 } else {
-    // If the window width is 1000 pixels or less, show a truncated description and attach the click event to the button
+    // If the window width is 1000 pixels or less, show a truncated description 
     document.querySelector('.description>p').innerHTML = desc.substring(0, 201) + '...';
 }
