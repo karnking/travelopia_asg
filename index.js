@@ -20,12 +20,11 @@ const handleClick = () => {
 };
 document.querySelector('.description>button').addEventListener("click", handleClick);
 
-// Get the window width
+// Detech resize of window and call the function
 window.addEventListener("resize",changeP)
-// If the window width is greater than 1000 pixels, show the full description
 function changeP() {
     const w = window.innerWidth;
-    console.log(w)
+    // If the window width is greater than 1000 pixels, show the full description
     if (w > 1000) {
         document.querySelector('.description>p').innerHTML = desc;
     } else {
