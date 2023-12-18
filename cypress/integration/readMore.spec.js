@@ -17,7 +17,7 @@ describe('Read More/Read Less', () => {
 
     // Check if the full description and correct state is displayed after clicking
     // cy.get('.description>p').should('have.text', desc);
-    // cy.get('.description>button>span').should('have.text', 'Show Less');
+    cy.get('.description>button>span').should('have.text', 'Show Less');
 
     // Click the Read Less button
     cy.get('.description>button').click();

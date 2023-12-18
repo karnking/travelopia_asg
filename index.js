@@ -21,12 +21,16 @@ const handleClick = () => {
 document.querySelector('.description>button').addEventListener("click", handleClick);
 
 // Get the window width
-let w = window.innerWidth;
-
+window.addEventListener("resize",changeP)
 // If the window width is greater than 1000 pixels, show the full description
-if (w > 1000) {
-    document.querySelector('.description>p').innerHTML = desc;
-} else {
-    // If the window width is 1000 pixels or less, show a truncated description 
-    document.querySelector('.description>p').innerHTML = desc.substring(0, 201) + '...';
+function changeP() {
+    const w = window.innerWidth;
+    console.log(w)
+    if (w > 1000) {
+        document.querySelector('.description>p').innerHTML = desc;
+    } else {
+        // If the window width is 1000 pixels or less, show a truncated description 
+        document.querySelector('.description>p').innerHTML = desc.substring(0, 201) + '...';
+    }
 }
+changeP()
